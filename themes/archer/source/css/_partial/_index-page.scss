@@ -1,0 +1,98 @@
+// ========== main ========== //
+.index-post {
+    display: block;
+    position: relative;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    &:first-of-type {
+        padding-top: 0;
+    }
+}
+
+// ========== abstract content ========== //
+.abstract-content {
+    color: #aaa;
+    white-space: normal;
+    word-break: break-all;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// ========== abstract title ========== //
+.abstract-post-title {
+    font-size: 1.5rem;
+    color: $index-post-link-color;
+    text-align: left;
+    width: 100%;
+    padding: 0 0 0.3rem 0;
+}
+
+.abstract-title {
+    position: relative;
+    font-family: $base-font-family;
+    margin: 0;
+    line-height: 1.5rem;
+    padding-bottom: 0.2rem;
+    span {
+        font-size: 1.5rem;
+        position: relative;
+        @include hover-line($height: 3px);
+    }
+}
+
+// ========== abstract meta ========== //
+.abstract-post-meta {
+    position: relative;
+    padding: 0.5rem 0 0 0;
+    font-family: $feature-font-family;
+    line-height: 1rem;
+    color: #aaa;
+    overflow: hidden;
+    height: 1.5rem;
+}
+
+// tags
+.abstract-tags {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    .post-tag {
+        font-size: 1rem;
+        position: relative;
+        overflow: visible;
+        color: $index-post-tag-color;
+        margin-left: 0.4rem;
+        &::before {
+            position: relative;
+            left: -2px;
+            content: '#';
+        } 
+        @include hover-line();
+    }
+}
+
+// date
+.abstract-date {
+    float: left;
+    text-align: center;
+    transition: all 0.2s ease-out;
+    margin-right: 0.2rem;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.abstract-calander::before {
+    position: relative;
+    top: -0.05rem;
+    margin-right: 0.3rem;
+    font-size: 1.1rem;
+    content: "\e676";
+}
+
+.abstract-time {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 1rem;
+}
